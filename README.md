@@ -14,17 +14,28 @@ flowchart TD
 				wm_app_doc_latex[latex]
 			end
 			subgraph wm_app_img[img]
+				wm_app_img_inkscape[inkscape]
 			end
 			subgraph wm_app_lng[lng]
 				wm_app_lng_python[python]
 			end
+			subgraph wm_app_sys[lng]
+				wm_app_sys_python[python]
+			end
 		end
 		subgraph wm_dev[dev]
+			direction LR
 			subgraph wm_dev_scm[scm]
 				wm_dev_scm_git[git]
 			end
 			subgraph wm_dev_lng[lng]
 				wm_dev_lng_c[c]
+			end
+		end
+		subgraph wm_key[key]
+			direction LR
+			subgraph wm_key_layout[layout]
+				wm_key_layout_cfilorux[cfilorux]
 			end
 		end
 	end
@@ -34,11 +45,20 @@ flowchart TD
 	click wm_app "./wm_app" _blank
 	click wm_app_doc "./wm_app_doc" _blank
 	click wm_app_doc_latex "./wm_app_doc_latex" _blank
+	click wm_app_img "./wm_app_img" _blank
+	click wm_app_img_inkscape "./wm_app_img_inkscape" _blank
+	click wm_app_lng "./wm_app_lng" _blank
+	click wm_app_lng_python "./wm_app_lng_python" _blank
 
-	click wm_lng_c "./wm_lng_c" _blank
-	click wm_lng_python "./wm_lng_python" _blank
-
+	click wm_dev "./wm_dev" _blank
+	click wm_dev_scm "./wm_dev_scm" _blank
 	click wm_dev_scm_git "./wm_dev_scm_git" _blank
+	click wm_dev_lng "./wm_dev_lng" _blank
+	click wm_dev_lng_c "./wm_dev_lng_c" _blank
+
+	click wm_key "./wm_key" _blank
+	click wm_key_layout "./wm_key_layout" _blank
+	click wm_key_layout_cfilorux "./wm_key_layout_cfilorux" _blank
 ```
 
 The naming convention is from general to specific :
